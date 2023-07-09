@@ -38,3 +38,38 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app --reload
 ```
+2. Access the API endpoints in your preferred API testing tool or web browser.
+
+## APIs
+
+The following APIs are available in the E-commerce Application:
+
+### Get All Products
+
+- Endpoint: `api/products`
+- Method: GET
+- Description: Retrieve all products from the db.
+- Response:
+ - Status: 200 OK
+ - Body: List of products
+Example
+```bash
+[
+    {
+        "id": 1,
+        "name": "TV",
+        "price": 500.0,
+        "available_quantity": 10,
+        "category": "Electronics"
+    },
+    {
+        "id": 2,
+        "name": "Laptop",
+        "price": 1000.0,
+        "available_quantity": 5,
+        "category": "Electronics"
+    }
+]
+```
+
+
