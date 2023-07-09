@@ -69,7 +69,9 @@ The following APIs are available in the E-commerce Application:
     }
 ]
 ```
-###Create a New Order
+
+
+### Create a New Order
 <br/>Endpoint: `api/orders`
 <br/>Method: POST
 <br/>Example Request:
@@ -99,7 +101,7 @@ Content-Type: application/json
 
 ```
 
-###Get All Orders
+### Get All Orders
 </br>Endpoint: `api/orders`
 </br>Method: GET
 </br>Example Request:
@@ -145,11 +147,11 @@ Content-Type: application/json
     }]
 ```
 
-###Get Single Orders
+### Get Single Orders
 </br>Endpoint: `api/orders/<id>`
 </br>Method: GET
 
-###Update Product
+### Update Product
 </br>Endpoint: `api/products/<product_id:int>`
 </br>Method: GET
 </br>Example Request:
