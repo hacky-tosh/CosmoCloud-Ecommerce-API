@@ -15,7 +15,7 @@ async def create_book(request: Request, order:Order):
      return order_rule.create_order(request,order)
      
 #To get order details by orderId     
-@router.get("/{id}/",response_description="Get order by order Id",response_model=Order)
+@router.get("/{id}",response_description="Get order by order Id",response_model=Order)
 def get_order_by_id(request:Request,id:str):
     return order_rule.get_order_by_id(request,id)
 
