@@ -1,7 +1,5 @@
 # CosmoCloud-Ecommerce-API
 
-# Ecommerce Application
-
 This is an Ecommerce Application built with Python and FastAPI.
 
 ## Overview
@@ -52,7 +50,7 @@ The following APIs are available in the E-commerce Application:
 - Response:
  - Status: 200 OK
  - Body: List of products
-Example
+
 ```bash
 [
     {
@@ -71,5 +69,101 @@ Example
     }
 ]
 ```
+###Create a New Order
+<br/>Endpoint: `api/orders`
+<br/>Method: POST
+<br/>Example Request:
+```bash
+POST http://localhost:8000/api/orders
+Content-Type: application/json
 
+{
+  "timestamp": "2023-07-08T10:30:00",
+  "items": [
+    {
+      "productId": "1",
+      "boughtQuantity": 2
+    },
+    {
+      "productId": "2",
+      "boughtQuantity": 1
+    }
+  ],
+  "totalAmount": 0.0,
+  "userAddress": {
+    "city": "Sample City",
+    "country": "Sample Country",
+    "zipCode": "12345"
+  }
+}
+
+```
+
+###Get All Orders
+</br>Endpoint: `api/orders`
+</br>Method: GET
+</br>Example Request:
+```bash
+[
+    {
+        "timestamp": "2023-07-09T15:27:14.092011",
+        "items": [
+            {
+                "productId": 1,
+                "boughtQuantity": 2
+            },
+            {
+                "productId": 2,
+                "boughtQuantity": 1
+            }
+        ],
+        "totalAmount": 1.0,
+        "userAddress": {
+            "city": "Sample City",
+            "country": "Sample Country",
+            "zipCode": "12345"
+        }
+    },
+    {
+        "timestamp": "2023-07-09T15:29:28.591415",
+        "items": [
+            {
+                "productId": 1,
+                "boughtQuantity": 2
+            },
+            {
+                "productId": 2,
+                "boughtQuantity": 1
+            }
+        ],
+        "totalAmount": 3499.9700000000003,
+        "userAddress": {
+            "city": "Sample City",
+            "country": "Sample Country",
+            "zipCode": "12345"
+        }
+    }]
+```
+
+###Get Single Orders
+</br>Endpoint: `api/orders/<id>`
+</br>Method: GET
+
+###Update Product
+</br>Endpoint: `api/products/<product_id:int>`
+</br>Method: GET
+</br>Example Request:
+```bash
+PUT http://localhost:8000/api/products/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "TV",
+    "price": 999.99,
+    "available_quantity": 20,
+    "category": "Electronics"
+}
+
+```
 
