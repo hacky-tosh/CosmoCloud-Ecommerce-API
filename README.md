@@ -1,4 +1,4 @@
-# CosmoCloud-Ecommerce-API
+# Ecommerce-API-App Using FAST Api
 
 This is an Ecommerce Application built with Python and FastAPI.
 
